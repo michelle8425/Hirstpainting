@@ -28,25 +28,16 @@ c_list = [(238, 254, 249), (23, 16, 94),(232, 43, 6), (153, 14, 30),
           (244, 168, 154), (175, 184, 222), (111, 9, 23), (179, 30, 10)]
 
 tim.speed(0)
-# no lines
 tim.penup()
-# hide tim
 tim.hideturtle()
-# putting it as 225,so it'll move downwards and then can take the one dot that's perfect  to start from
 tim.setheading(225)
-# select that dot by moving 300 down
 tim.forward(300)
-# turning it  north to begin
 tim.setheading(0)
-# so it ends at 100
 number = 101
 for count in range(1, number):
     tim.dot(20, r.choice(c_list))
     tim.forward(50)
     if count % 10 == 0:
-        # so this way it won't stop at numbers like 8 and 14
-        # here it turns up and then moves 50 and turns left and moves all
-        # the way to the parallel dot of the starting and then turned north
         tim.setheading(90)
         tim.forward(50)
         tim.setheading(180)
